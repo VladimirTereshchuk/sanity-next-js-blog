@@ -16,6 +16,7 @@ import Form from "../../components/form";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
+  console.log(post);
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -29,7 +30,7 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
               <Head>
-                <title>{post.title} | Get Rich or Die Tring</title>
+                <title>{post.title} | Get Rich or Die Trying</title>
                 <meta name="description" content={post.description} />
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>
